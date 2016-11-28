@@ -1,13 +1,17 @@
+// Binary convertion file
 
 var valDec = 0;
 //var newVal = 0;
 var string_reversal = '';
 
-Testing(valDec);
+var outputM = 0;
+
+//Testing(valDec);
 //string_reversal = Convert_To_Binary(valDec);
 //Convert_To_Decimal(string_reversal);
 
-document.getElementById("textbox").value = "Johnny Bravo";              
+
+
 
 function Convert_To_Binary (valDec){
 
@@ -66,7 +70,7 @@ function Convert_To_Decimal (string_reversal){
 
 	var string_readable = '';
 	var prep_readable = string_reversal;
-	var outputM = 0;
+	outputM = 0;
 	
 	for (var pos = (prep_readable.length - 1); pos >= 0 ; pos --){
 	
@@ -98,14 +102,48 @@ function Convert_To_Decimal (string_reversal){
 }
 
 function Testing (valDec) {
+    
+    valDec = document.getElementById("textbox").value;
+    console.log(UserValue);
 
 	for (var t = 1; t <= 100; t++){
 	
-		valDec = t;
+		//valDec = t;
 		
 		string_reversal = Convert_To_Binary(valDec);
 		Convert_To_Decimal(string_reversal);
 		
 	}
+}
+
+        
+function Binary (valDec) {
+    
+    valDec = document.getElementById("textbox").value;
+    console.log(valDec);
+    
+    string_reversal = Convert_To_Binary(valDec);
+
+    document.getElementById("Output_Bin").value = string_reversal;  
+    
+    //Convert_To_Decimal(string_reversal);
+
+  //document.getElementById("Output_Bin").value = outputM;
 
 }
+
+function Decimal (valDec) {
+    
+   //valDec = document.getElementById("textbox").value;
+    //console.log(valDec);
+
+    
+    
+    //string_reversal = Convert_To_Binary(valDec);
+    //document.getElementById("Output_Dec").value = string_reversal;  
+    
+    Convert_To_Decimal(string_reversal);
+
+  document.getElementById("Output_Dec").value = outputM;
+}
+
